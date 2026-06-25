@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google I/O Connect Summary | Agentic AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --google-blue: #4285F4;
+            --google-red: #EA4335;
+            --google-yellow: #FBBC05;
+            --google-green: #34A853;
+            --text-dark: #202124;
+            --text-light: #5f6368;
+            --bg-gray: #f8f9fa;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Google Sans', sans-serif;
+        }
+
+        header {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* The Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+            border-color: #e0e0e0;
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        /* Color Coding */
+        .blue { color: var(--google-blue); } .bg-blue { background: #e8f0fe; color: var(--google-blue); }
+        .red { color: var(--google-red); } .bg-red { background: #fce8e6; color: var(--google-red); }
+        .yellow { color: var(--google-yellow); } .bg-yellow { background: #fef7e0; color: var(--google-yellow); }
+        .green { color: var(--google-green); } .bg-green { background: #e6f4ea; color: var(--google-green); }
+
+        /* Workflow Section */
+        .workflow {
+            background: white;
+            padding: 40px;
+            border-radius: 32px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .workflow h2 {
+            margin-bottom: 30px;
+        }
+
+        .flow-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .flow-step {
+            flex: 1;
+            min-width: 150px;
+            padding: 20px;
+            border-radius: 16px;
+            background: var(--bg-gray);
+            position: relative;
+            font-weight: 500;
+        }
+
+        .arrow {
+            font-size: 24px;
+            color: var(--text-light);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .flow-container { flex-direction: column; }
+            .arrow { transform: rotate(90deg); margin: 10px 0; }
+            .hero-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="hero-title">Google I/O Connect</h1>
+        <p class="hero-subtitle">From Chatbots to AI Agents: A summary of the key building blocks for the next generation of intelligent applications.</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <!-- App Functions -->
+            <div class="card">
+                <div class="icon">🛠️</div>
+                <span class="tag bg-blue">The Action</span>
+                <h3 class="blue">App Functions</h3>
+                <p>The bridge between the LLM and your app's logic. It allows the AI to execute real-world tasks—like booking a flight or updating a database—rather than just describing how to do it.</p>
+            </div>
+
+            <!-- Skills -->
+            <div class="card">
+                <div class="icon">🎓</div>
+                <span class="tag bg-red">The Knowledge</span>
+                <h3 class="red">Skills</h3>
+                <p>Specialized capabilities that give the AI domain-specific expertise. Skills wrap functions into a logical "persona," ensuring higher accuracy for complex, niche industry tasks.</p>
+            </div>
+
+            <!-- Journeys -->
+            <div class="card">
+                <div class="icon">🗺️</div>
+                <span class="tag bg-yellow">The Logic</span>
+                <h3 class="yellow">Journeys</h3>
+                <p>The orchestration layer. Journeys turn a single prompt into a multi-step goal, guiding the user through a sequence of actions from start to finish without friction.</p>
+            </div>
+
+            <!-- Gemma Local -->
+            <div class="card">
+                <div class="icon">📱</div>
+                <span class="tag bg-green">The Engine</span>
+                <h3 class="green">Gemma Local</h3>
+                <p>Bringing open-weight models directly to the device. This ensures instant latency, total data privacy, and the ability to operate offline for core AI tasks.</p>
+            </div>
+        </div>
+
+        <section class="workflow">
+            <h2>The Agentic Flow</h2>
+            <p style="margin-bottom: 30px; color: var(--text-light);">How these pieces work together in a real user experience:</p>
+            <div class="flow-container">
+                <div class="flow-step"><strong>Gemma Local</strong><br><small>Fast Intent Detection</small></div>
+                <div class="arrow">➔</div>
+                <div class="flow-step"><strong>Skills</strong><br><small>Domain Expertise</small></div>
+                <div class="arrow">➔</div>
+                <div class="flow-step"><strong>Journeys</strong><br><small>Workflow Map</small></div>
+                <div class="arrow">➔</div>
+                <div class="flow-step"><strong>App Functions</strong><br><small>Execution/Action</small></div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Created for Google I/O Connect Summary &bull; 2024</p>
+    </footer>
+
+</body>
+</html>
