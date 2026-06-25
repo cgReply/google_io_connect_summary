@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google I/O Berlin 2026 — Technical Notes on the Agentic Android Stack | Chiara Gabrieli @MobileReply</title>
+    <title>Google I/O Berlin 2026 — Technical Notes on the Agentic Android Stack</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -499,6 +499,8 @@
         <div class="hero-eyebrow" data-i18n="heroEyebrow">Technical notes <span>/</span> Berlin <span>/</span> June 25, 2026</div>
         <h1 class="hero-title" data-i18n="heroTitle">Google I/O Berlin:<br>updates from the <em>agentic</em> shift</h1>
         <p class="hero-subtitle" data-i18n="heroSubtitle">An architectural overview of the framework infrastructure Google is deploying to allow AI agents to execute programmatic actions inside Android apps.</p>
+
+        <p class="hero-subtitle" style="font-weight: bold;" data-i18n="heroSubtitle">Chiara Gabrieli | @MobileReply</p>
         <div class="hero-meta">
             <span><span class="dot" style="background:var(--google-blue)"></span>AppFunctions</span>
             <span><span class="dot" style="background:var(--google-red)"></span>Android CLI &amp; Skills</span>
@@ -761,7 +763,7 @@
                         example: "This runs alongside a separate UI automation fallback framework previewing on select devices, designed to programmatically navigate legacy interfaces when native AppFunctions are unavailable.",
                         refs: [
                             { label: "Android Developers Blog — The Intelligent OS", url: "https://android-developers.googleblog.com/2026/02/the-intelligent-os-making-ai-agents.html" },
-                            { label: "Android Developers Blog — Top AI on Android updates, I/O '26", url: "https://developer.android.com/blog/posts/top-ai-on-android-updates-for-building-intelligent-experiences-from-google-i-o-26" }
+                            { label: "Android Developers Blog — Top AI on Android updates, I/O '26", url: "https://developer.android.com/blog/posts/top-ai-on-android-updates-for-building-intelligent-experiences-from-google-i-o-26" },
                             { label: "Android Developers", url: "https://developer.android.com/ai/appfunctions?hl=it" }
                         ]
                     },
@@ -811,7 +813,6 @@
                         refs: [
                             { label: "Android Developers Blog — 17 things for I/O", url: "https://android-developers.googleblog.com/2026/05/17-things-android-developers-google-io.html" },
                             { label: "Android Developers", url: "https://developer.android.com/tools/agents/android-skills?hl=it" }
-
                         ]
                     },
                     gemma: {
@@ -1032,6 +1033,7 @@
             grid.innerHTML = '';
             
             galleryItemsData.forEach(item => {
+                const caption = currentLang === 'en' ? item.labelEn : item.labelIt;
                 const element = document.createElement('div');
                 element.className = 'gallery-item';
                 element.onclick = () => openMediaLightbox(item.file, item.type, caption);
@@ -1047,15 +1049,13 @@
                 } else {
                     previewHtml = `
                         <div class="gallery-preview">
-                            <img src="${item.file}" >
+                            <img src="${item.file}" alt="${caption}">
                         </div>
                     `;
                 }
                 
                 element.innerHTML = `
                     ${previewHtml}
-                    <div class="gallery-meta">
-                    </div>
                 `;
                 grid.appendChild(element);
             });
